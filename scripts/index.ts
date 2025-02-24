@@ -1,7 +1,10 @@
 import data from "./data/reformatted.json";
 import circular from "graphology-layout/circular";
-import forceAtlas2 from "graphology-layout-forceatlas2";
-import FA2Layout from "graphology-layout-forceatlas2/worker";
+// import ForceSupervisor from 'graphology-layout-force/work';
+import { random } from "graphology-layout";
+import ForceLayoutSupervisor from 'graphology-layout-force/worker';
+// import forceAtlas2 from "graphology-layout-forceatlas2";
+// import FA2Layout from "graphology-layout-forceatlas2/worker";
 import Graph from "graphology";
 import Sigma from "sigma";
 import {
@@ -23,7 +26,7 @@ const constructGraph = () => {
 
   for (const edge of data.links) {
     try {
-      graph.addUndirectedEdge(edge.source, edge.target, {
+      graph.addDirectedEdge(edge.source, edge.target, {
         ...defaultStyle.edge,
       });
     } catch (error) {
@@ -48,14 +51,18 @@ const constructGraph = () => {
 };
 
 const graph = constructGraph();
-circular.assign(graph);
+random.assign(graph);
 const state = new State(graph);
 
-const sensibleSettings = forceAtlas2.inferSettings(graph);
-console.log(sensibleSettings);
-const layout = new FA2Layout(graph, {
-  settings: sensibleSettings,
-});
+const layout = new ForceLayoutSupervisor(graph, {
+  settings: {
+    attraction: 1e-10,
+    repulsion: 1e-9,
+    gravity: 1e-4,
+    // inertia: 1e-10,
+    maxMove: 10
+  },
+})
 layout.start();
 
 const renderer = new Sigma(graph, document.getElementById("container")!);
