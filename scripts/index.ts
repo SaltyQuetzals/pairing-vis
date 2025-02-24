@@ -1,6 +1,7 @@
 import data from "./data/reformatted.json";
 import circular from "graphology-layout/circular";
-import ForceSupervisor from "graphology-layout-force/worker";
+import forceAtlas2 from "graphology-layout-forceatlas2";
+import FA2Layout from "graphology-layout-forceatlas2/worker";
 import Graph from "graphology";
 import Sigma from "sigma";
 import {
@@ -24,7 +25,7 @@ const constructGraph = () => {
 
   for (const edge of data.links) {
     try {
-      graph.addDirectedEdge(edge.source, edge.target, { ...DefaultEdge });
+      graph.addUndirectedEdge(edge.source, edge.target, { ...DefaultEdge });
     } catch (error) {
       console.error(error);
     }
@@ -32,7 +33,7 @@ const constructGraph = () => {
 
   const MAX_SIZE = 20;
   const maxEdges = graph.reduceNodes(
-    (acc, node) => Math.max(acc, graph.neighbors(node).length),
+    (acc, node) => Math.max(acc, graph.degree(node)),
     0
   );
 
@@ -40,7 +41,7 @@ const constructGraph = () => {
     graph.updateNodeAttribute(
       node,
       "size",
-      () => (graph.neighbors(node).length / maxEdges) * MAX_SIZE
+      () => (graph.degree(node) / maxEdges) * MAX_SIZE
     );
   });
   return graph;
@@ -50,9 +51,10 @@ const graph = constructGraph();
 circular.assign(graph);
 const state = new State(graph);
 
-const layout = new ForceSupervisor(graph, {
-  isNodeFixed: (_, attr) => attr.highlighted,
-  settings: {},
+const sensibleSettings = forceAtlas2.inferSettings(graph);
+console.log(sensibleSettings);
+const layout = new FA2Layout(graph, {
+  settings: sensibleSettings
 });
 layout.start();
 
