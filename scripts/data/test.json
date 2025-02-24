@@ -1,0 +1,536 @@
+{
+    "nodes": [
+        {
+            "id": "Almond"
+        },
+        {
+            "id": "Anchovy"
+        },
+        {
+            "id": "Anise"
+        },
+        {
+            "id": "Apple"
+        },
+        {
+            "id": "Apricot"
+        },
+        {
+            "id": "Asparagus"
+        },
+        {
+            "id": "Avocado"
+        },
+        {
+            "id": "Bacon"
+        },
+        {
+            "id": "Banana"
+        },
+        {
+            "id": "Basil"
+        }
+    ],
+    "links": [
+        {
+            "source": "Almond",
+            "target": "Anise",
+            "value": 1
+        },
+        {
+            "source": "Almond",
+            "target": "Apple",
+            "value": 1
+        },
+        {
+            "source": "Almond",
+            "target": "Apricot",
+            "value": 1
+        },
+        {
+            "source": "Almond",
+            "target": "Asparagus",
+            "value": 1
+        },
+        {
+            "source": "Almond",
+            "target": "Banana",
+            "value": 1
+        },
+        {
+            "source": "Almond",
+            "target": "Blackberry",
+            "value": 1
+        },
+        {
+            "source": "Almond",
+            "target": "Black Currant",
+            "value": 1
+        },
+        {
+            "source": "Almond",
+            "target": "Blueberry",
+            "value": 1
+        },
+        {
+            "source": "Almond",
+            "target": "Butternut Squash",
+            "value": 1
+        },
+        {
+            "source": "Almond",
+            "target": "Cardamom",
+            "value": 1
+        },
+        {
+            "source": "Almond",
+            "target": "Cauliflower",
+            "value": 1
+        },
+        {
+            "source": "Almond",
+            "target": "Cherry",
+            "value": 1
+        },
+        {
+            "source": "Almond",
+            "target": "Chicken",
+            "value": 1
+        },
+        {
+            "source": "Almond",
+            "target": "Chili",
+            "value": 1
+        },
+        {
+            "source": "Almond",
+            "target": "Chocolate",
+            "value": 1
+        },
+        {
+            "source": "Almond",
+            "target": "Cinnamon",
+            "value": 1
+        },
+        {
+            "source": "Almond",
+            "target": "Coconut",
+            "value": 1
+        },
+        {
+            "source": "Almond",
+            "target": "Coffee",
+            "value": 1
+        },
+        {
+            "source": "Almond",
+            "target": "Fig",
+            "value": 1
+        },
+        {
+            "source": "Almond",
+            "target": "Garlic",
+            "value": 1
+        },
+        {
+            "source": "Almond",
+            "target": "Ginger",
+            "value": 1
+        },
+        {
+            "source": "Almond",
+            "target": "Grape",
+            "value": 1
+        },
+        {
+            "source": "Almond",
+            "target": "Hard Cheese",
+            "value": 1
+        },
+        {
+            "source": "Almond",
+            "target": "Hazelnut",
+            "value": 1
+        },
+        {
+            "source": "Almond",
+            "target": "Lamb",
+            "value": 1
+        },
+        {
+            "source": "Almond",
+            "target": "Lemon",
+            "value": 1
+        },
+        {
+            "source": "Almond",
+            "target": "Melon",
+            "value": 1
+        },
+        {
+            "source": "Almond",
+            "target": "Oily Fish",
+            "value": 1
+        },
+        {
+            "source": "Almond",
+            "target": "Olive",
+            "value": 1
+        },
+        {
+            "source": "Almond",
+            "target": "Orange",
+            "value": 1
+        },
+        {
+            "source": "Almond",
+            "target": "Peach",
+            "value": 1
+        },
+        {
+            "source": "Almond",
+            "target": "Pear",
+            "value": 1
+        },
+        {
+            "source": "Almond",
+            "target": "Raspberry",
+            "value": 1
+        },
+        {
+            "source": "Almond",
+            "target": "Rhubarb",
+            "value": 1
+        },
+        {
+            "source": "Almond",
+            "target": "Rose",
+            "value": 1
+        },
+        {
+            "source": "Almond",
+            "target": "Rosemary",
+            "value": 1
+        },
+        {
+            "source": "Almond",
+            "target": "Saffron",
+            "value": 1
+        },
+        {
+            "source": "Almond",
+            "target": "Shellfish",
+            "value": 1
+        },
+        {
+            "source": "Almond",
+            "target": "Strawberry",
+            "value": 1
+        },
+        {
+            "source": "Almond",
+            "target": "White Chocolate",
+            "value": 1
+        },
+        {
+            "source": "Anchovy",
+            "target": "Beef",
+            "value": 1
+        },
+        {
+            "source": "Anchovy",
+            "target": "Beet",
+            "value": 1
+        },
+        {
+            "source": "Anchovy",
+            "target": "Broccoli",
+            "value": 1
+        },
+        {
+            "source": "Anchovy",
+            "target": "Caper",
+            "value": 1
+        },
+        {
+            "source": "Anchovy",
+            "target": "Cauliflower",
+            "value": 1
+        },
+        {
+            "source": "Anchovy",
+            "target": "Chili",
+            "value": 1
+        },
+        {
+            "source": "Anchovy",
+            "target": "Coconut",
+            "value": 1
+        },
+        {
+            "source": "Anchovy",
+            "target": "Egg",
+            "value": 1
+        },
+        {
+            "source": "Anchovy",
+            "target": "Garlic",
+            "value": 1
+        },
+        {
+            "source": "Anchovy",
+            "target": "Hard Cheese",
+            "value": 1
+        },
+        {
+            "source": "Anchovy",
+            "target": "Lamb",
+            "value": 1
+        },
+        {
+            "source": "Anchovy",
+            "target": "Lemon",
+            "value": 1
+        },
+        {
+            "source": "Anchovy",
+            "target": "Lime",
+            "value": 1
+        },
+        {
+            "source": "Anchovy",
+            "target": "Olive",
+            "value": 1
+        },
+        {
+            "source": "Anchovy",
+            "target": "Onion",
+            "value": 1
+        },
+        {
+            "source": "Anchovy",
+            "target": "Pineapple",
+            "value": 1
+        },
+        {
+            "source": "Anchovy",
+            "target": "Potato",
+            "value": 1
+        },
+        {
+            "source": "Anchovy",
+            "target": "Rosemary",
+            "value": 1
+        },
+        {
+            "source": "Anchovy",
+            "target": "Sage",
+            "value": 1
+        },
+        {
+            "source": "Anchovy",
+            "target": "Soft Cheese",
+            "value": 1
+        },
+        {
+            "source": "Anchovy",
+            "target": "Tomato",
+            "value": 1
+        },
+        {
+            "source": "Anchovy",
+            "target": "Watercress",
+            "value": 1
+        },
+        {
+            "source": "Anchovy",
+            "target": "White Fish",
+            "value": 1
+        },
+        {
+            "source": "Anise",
+            "target": "Almond",
+            "value": 1
+        },
+        {
+            "source": "Anise",
+            "target": "Apple",
+            "value": 1
+        },
+        {
+            "source": "Anise",
+            "target": "Asparagus",
+            "value": 1
+        },
+        {
+            "source": "Anise",
+            "target": "Bacon",
+            "value": 1
+        },
+        {
+            "source": "Anise",
+            "target": "Banana",
+            "value": 1
+        },
+        {
+            "source": "Anise",
+            "target": "Basil",
+            "value": 1
+        },
+        {
+            "source": "Anise",
+            "target": "Beef",
+            "value": 1
+        },
+        {
+            "source": "Anise",
+            "target": "Black Currant",
+            "value": 1
+        },
+        {
+            "source": "Anise",
+            "target": "Carrot",
+            "value": 1
+        },
+        {
+            "source": "Anise",
+            "target": "Chicken",
+            "value": 1
+        },
+        {
+            "source": "Anise",
+            "target": "Chili",
+            "value": 1
+        },
+        {
+            "source": "Anise",
+            "target": "Chocolate",
+            "value": 1
+        },
+        {
+            "source": "Anise",
+            "target": "Cinnamon",
+            "value": 1
+        },
+        {
+            "source": "Anise",
+            "target": "Coconut",
+            "value": 1
+        },
+        {
+            "source": "Anise",
+            "target": "Cucumber",
+            "value": 1
+        },
+        {
+            "source": "Anise",
+            "target": "Egg",
+            "value": 1
+        },
+        {
+            "source": "Anise",
+            "target": "Fig",
+            "value": 1
+        },
+        {
+            "source": "Anise",
+            "target": "Goat Cheese",
+            "value": 1
+        },
+        {
+            "source": "Anise",
+            "target": "Grape",
+            "value": 1
+        },
+        {
+            "source": "Anise",
+            "target": "Hard Cheese",
+            "value": 1
+        },
+        {
+            "source": "Anise",
+            "target": "Lamb",
+            "value": 1
+        },
+        {
+            "source": "Anise",
+            "target": "Lemon",
+            "value": 1
+        },
+        {
+            "source": "Anise",
+            "target": "Melon",
+            "value": 1
+        },
+        {
+            "source": "Anise",
+            "target": "Mint",
+            "value": 1
+        },
+        {
+            "source": "Anise",
+            "target": "Mushroom",
+            "value": 1
+        },
+        {
+            "source": "Anise",
+            "target": "Oily Fish",
+            "value": 1
+        },
+        {
+            "source": "Anise",
+            "target": "Olive",
+            "value": 1
+        },
+        {
+            "source": "Anise",
+            "target": "Orange",
+            "value": 1
+        },
+        {
+            "source": "Anise",
+            "target": "Oyster",
+            "value": 1
+        },
+        {
+            "source": "Anise",
+            "target": "Parsnip",
+            "value": 1
+        },
+        {
+            "source": "Anise",
+            "target": "Pea",
+            "value": 1
+        },
+        {
+            "source": "Anise",
+            "target": "Pear",
+            "value": 1
+        },
+        {
+            "source": "Anise",
+            "target": "Pineapple",
+            "value": 1
+        },
+        {
+            "source": "Anise",
+            "target": "Pork",
+            "value": 1
+        },
+        {
+            "source": "Anise",
+            "target": "Rhubarb",
+            "value": 1
+        },
+        {
+            "source": "Anise",
+            "target": "Rutabaga",
+            "value": 1
+        },
+        {
+            "source": "Anise",
+            "target": "Saffron",
+            "value": 1
+        }
+    ]
+}
