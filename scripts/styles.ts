@@ -1,28 +1,28 @@
 import { EdgeDisplayData, NodeDisplayData } from "sigma/types";
 
-export const DefaultNodeDisplayData: Partial<NodeDisplayData> = {
+export const DefaultNode: Partial<NodeDisplayData> = {
   size: 10,
   color: "gray",
 };
 
-export const HoveredNodeDisplayData: Partial<NodeDisplayData> = {
+export const HoveredNode: Partial<NodeDisplayData> = {
   forceLabel: true
 }
 
-export const DeEmphasizedNodeDisplayData: Partial<NodeDisplayData> = {
+export const DeEmphasizedNode: Partial<NodeDisplayData> = {
   label: "",
   color: "#f6f6f6",
 };
 
-export const DeEmphasizedEdgeDisplayData: Partial<EdgeDisplayData> = {
+export const DeEmphasizedEdge: Partial<EdgeDisplayData> = {
     hidden: true
 }
 
-export const SelectedNodeDisplayData: Partial<NodeDisplayData> = {
+export const SelectedNode: Partial<NodeDisplayData> = {
     color: "orange",
     forceLabel: true
 }
 
-export const SelectedEdgeDisplayData: Partial<EdgeDisplayData> = {
+export const SelectedEdge: Partial<EdgeDisplayData> = {
     color: "orange"
 }
