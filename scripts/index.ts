@@ -1,15 +1,15 @@
 import data from "./data/reformatted.json";
 import circular from "graphology-layout/circular";
-
+import ForceSupervisor from "graphology-layout-force/worker";
 import Graph from "graphology";
 import Sigma from "sigma";
 import {
-  DeEmphasizedEdgeDisplayData,
-  DeEmphasizedNodeDisplayData,
-  DefaultNodeDisplayData,
-  HoveredNodeDisplayData,
-  SelectedEdgeDisplayData,
-  SelectedNodeDisplayData,
+  DeEmphasizedEdge,
+  DeEmphasizedNode,
+  DefaultNode,
+  HoveredNode,
+  SelectedEdge,
+  SelectedNode,
 } from "./styles";
 import State from "./state";
 import { EdgeDisplayData, NodeDisplayData } from "sigma/types";
@@ -18,7 +18,7 @@ const constructGraph = () => {
   const graph = new Graph();
 
   for (const node of data.nodes) {
-    graph.addNode(node.id, { label: node.id, ...DefaultNodeDisplayData });
+    graph.addNode(node.id, { label: node.id, ...DefaultNode });
   }
 
   for (const edge of data.links) {
@@ -33,10 +33,13 @@ const constructGraph = () => {
 };
 
 const graph = constructGraph();
-
 circular.assign(graph);
-
 const state = new State(graph);
+
+const layout = new ForceSupervisor(graph, {
+  isNodeFixed: (_, attr) => attr.highlighted,
+});
+layout.start();
 
 const renderer = new Sigma(graph, document.getElementById("container")!);
 
@@ -76,18 +79,18 @@ renderer.setSetting(
 
     if (state.selectionActive) {
       if (state.nodeIsSelected(node)) {
-        res = { ...res, ...SelectedNodeDisplayData };
+        res = { ...res, ...SelectedNode };
       } else {
-        res = {...res, ...DeEmphasizedEdgeDisplayData}
+        res = { ...res, ...DeEmphasizedEdge };
       }
     }
 
     if (state.hoveringActive) {
       if (state.nodeIsHovered(node)) {
-        res = { ...res, ...HoveredNodeDisplayData };
+        res = { ...res, ...HoveredNode };
       }
       if (!state.nodeIsHovered(node)) {
-        res = { ...res, ...DeEmphasizedNodeDisplayData };
+        res = { ...res, ...DeEmphasizedNode };
       }
     }
 
@@ -102,13 +105,13 @@ renderer.setSetting(
 
     if (state.selectionActive) {
       if (state.edgeIsSelected(edge)) {
-        res = { ...res, ...SelectedEdgeDisplayData };
+        res = { ...res, ...SelectedEdge };
       }
     }
 
     if (state.hoveringActive) {
       if (!state.edgeIsHovered(edge)) {
-        res = { ...res, ...DeEmphasizedEdgeDisplayData };
+        res = { ...res, ...DeEmphasizedEdge };
       }
     }
 
