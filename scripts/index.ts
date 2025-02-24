@@ -5,13 +5,11 @@ import FA2Layout from "graphology-layout-forceatlas2/worker";
 import Graph from "graphology";
 import Sigma from "sigma";
 import {
-  DeEmphasizedEdge,
-  DeEmphasizedNode,
-  DefaultEdge,
-  DefaultNode,
-  HoveredNode,
-  SelectedEdge,
-  SelectedNode,
+  deEmphasized,
+  defaultStyle,
+  hidden,
+  nodeHovered,
+  nodeSelected,
 } from "./styles";
 import State from "./state";
 import { EdgeDisplayData, NodeDisplayData } from "sigma/types";
@@ -20,12 +18,14 @@ const constructGraph = () => {
   const graph = new Graph();
 
   for (const node of data.nodes) {
-    graph.addNode(node.id, { label: node.id, ...DefaultNode });
+    graph.addNode(node.id, { label: node.id, ...defaultStyle.node });
   }
 
   for (const edge of data.links) {
     try {
-      graph.addUndirectedEdge(edge.source, edge.target, { ...DefaultEdge });
+      graph.addUndirectedEdge(edge.source, edge.target, {
+        ...defaultStyle.edge,
+      });
     } catch (error) {
       console.error(error);
     }
@@ -54,7 +54,7 @@ const state = new State(graph);
 const sensibleSettings = forceAtlas2.inferSettings(graph);
 console.log(sensibleSettings);
 const layout = new FA2Layout(graph, {
-  settings: sensibleSettings
+  settings: sensibleSettings,
 });
 layout.start();
 
@@ -96,18 +96,18 @@ renderer.setSetting(
 
     if (state.selectionActive) {
       if (state.nodeIsSelected(node)) {
-        res = { ...res, ...SelectedNode };
+        res = { ...res, ...nodeSelected.node };
       } else {
-        res = { ...res, ...DeEmphasizedEdge };
+        res = { ...res, ...hidden.node };
       }
     }
 
     if (state.hoveringActive) {
       if (state.nodeIsHovered(node)) {
-        res = { ...res, ...HoveredNode };
+        res = { ...res, ...nodeHovered.node };
       }
       if (!state.nodeIsHovered(node)) {
-        res = { ...res, ...DeEmphasizedNode };
+        res = { ...res, ...deEmphasized.node };
       }
     }
 
@@ -122,13 +122,13 @@ renderer.setSetting(
 
     if (state.selectionActive) {
       if (state.edgeIsSelected(edge)) {
-        res = { ...res, ...SelectedEdge };
+        res = { ...res, ...nodeSelected.edge };
       }
     }
 
     if (state.hoveringActive) {
       if (!state.edgeIsHovered(edge)) {
-        res = { ...res, ...DeEmphasizedEdge };
+        res = { ...res, ...deEmphasized.edge };
       }
     }
 
