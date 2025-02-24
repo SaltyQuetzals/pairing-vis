@@ -4,18 +4,24 @@
     "": {
       "name": "pairings-vis",
       "dependencies": {
+        "@sigma/utils": "^3.0.0",
         "graphology": "^0.26.0",
         "graphology-layout": "^0.6.1",
+        "graphology-layout-force": "^0.2.4",
         "sigma": "^3.0.1",
       },
     },
   },
   "packages": {
+    "@sigma/utils": ["@sigma/utils@3.0.0", "", { "peerDependencies": { "sigma": ">=3.0.0-beta.29" } }, "sha512-JCMjj3CHpA8yh8HcWm1YBs4Zdo2s0YUR2YKZ2NUlM2Purkdd8odLuaGQ/R/guSrBz/y+tOLSaQX7hKF6fkUG1g=="],
+
     "events": ["events@3.3.0", "", {}, "sha512-mQw+2fkQbALzQ7V0MY0IqdnXNOeTtP4r0lN9z7AAawCXgqea7bDii20AYrIBrFd/Hx0M2Ocz6S111CaFkUcb0Q=="],
 
     "graphology": ["graphology@0.26.0", "", { "dependencies": { "events": "^3.3.0" }, "peerDependencies": { "graphology-types": ">=0.24.0" } }, "sha512-8SSImzgUUYC89Z042s+0r/vMibY7GX/Emz4LDO5e7jYXhuoWfHISPFJYjpRLUSJGq6UQ6xlenvX1p/hJdfXuXg=="],
 
     "graphology-layout": ["graphology-layout@0.6.1", "", { "dependencies": { "graphology-utils": "^2.3.0", "pandemonium": "^2.4.0" }, "peerDependencies": { "graphology-types": ">=0.19.0" } }, "sha512-m9aMvbd0uDPffUCFPng5ibRkb2pmfNvdKjQWeZrf71RS1aOoat5874+DcyNfMeCT4aQguKC7Lj9eCbqZj/h8Ag=="],
+
+    "graphology-layout-force": ["graphology-layout-force@0.2.4", "", { "dependencies": { "graphology-utils": "^2.4.2" }, "peerDependencies": { "graphology-types": ">=0.19.0" } }, "sha512-NYZz0YAnDkn5pkm30cvB0IScFoWGtbzJMrqaiH070dYlYJiag12Oc89dbVfaMaVR/w8DMIKxn/ix9Bqj+Umm9Q=="],
 
     "graphology-types": ["graphology-types@0.24.8", "", {}, "sha512-hDRKYXa8TsoZHjgEaysSRyPdT6uB78Ci8WnjgbStlQysz7xR52PInxNsmnB7IBOM1BhikxkNyCVEFgmPKnpx3Q=="],
 
