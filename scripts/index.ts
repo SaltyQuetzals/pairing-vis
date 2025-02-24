@@ -6,6 +6,7 @@ import Sigma from "sigma";
 import {
   DeEmphasizedEdge,
   DeEmphasizedNode,
+  DefaultEdge,
   DefaultNode,
   HoveredNode,
   SelectedEdge,
@@ -23,12 +24,25 @@ const constructGraph = () => {
 
   for (const edge of data.links) {
     try {
-      graph.addDirectedEdge(edge.source, edge.target);
+      graph.addDirectedEdge(edge.source, edge.target, { ...DefaultEdge });
     } catch (error) {
       console.error(error);
     }
   }
 
+  const MAX_SIZE = 20;
+  const maxEdges = graph.reduceNodes(
+    (acc, node) => Math.max(acc, graph.neighbors(node).length),
+    0
+  );
+
+  graph.forEachNode((node) => {
+    graph.updateNodeAttribute(
+      node,
+      "size",
+      () => (graph.neighbors(node).length / maxEdges) * MAX_SIZE
+    );
+  });
   return graph;
 };
 
@@ -38,6 +52,7 @@ const state = new State(graph);
 
 const layout = new ForceSupervisor(graph, {
   isNodeFixed: (_, attr) => attr.highlighted,
+  settings: {},
 });
 layout.start();
 

@@ -5,9 +5,13 @@ export const DefaultNode: Partial<NodeDisplayData> = {
   color: "gray",
 };
 
+export const DefaultEdge: Partial<EdgeDisplayData> = {
+  size: 0.5,
+};
+
 export const HoveredNode: Partial<NodeDisplayData> = {
-  forceLabel: true
-}
+  forceLabel: true,
+};
 
 export const DeEmphasizedNode: Partial<NodeDisplayData> = {
   label: "",
@@ -15,14 +19,11 @@ export const DeEmphasizedNode: Partial<NodeDisplayData> = {
 };
 
 export const DeEmphasizedEdge: Partial<EdgeDisplayData> = {
-    hidden: true
-}
+  hidden: true,
+};
 
 export const SelectedNode: Partial<NodeDisplayData> = {
-    color: "orange",
-    forceLabel: true
-}
+  ...HoveredNode,
+};
 
-export const SelectedEdge: Partial<EdgeDisplayData> = {
-    color: "orange"
-}
+export const SelectedEdge: Partial<EdgeDisplayData> = {};

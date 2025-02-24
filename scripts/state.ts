@@ -1,11 +1,11 @@
 import Graph from "graphology";
 
 export default class State {
-  private hoveredNode?: string;
-  private hoveredNeighbors?: Set<string>;
+  public hoveredNode?: string;
+  public hoveredNeighbors?: Set<string>;
 
-  private selectedNode?: string;
-  private selectedNeighbors?: Set<string>;
+  public selectedNode?: string;
+  public selectedNeighbors?: Set<string>;
 
   constructor(private readonly graph: Graph) {}
 
