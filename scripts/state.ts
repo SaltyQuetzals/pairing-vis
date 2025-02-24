@@ -56,6 +56,10 @@ export default class State {
           this.graph.areNeighbors(node, this.selectedNode)
       );
 
-      public get hoveringActive() { return !!this.hoveredNode;}
-      public get selectionActive() { return !!this.selectedNode;}
+  public get hoveringActive() {
+    return !!this.hoveredNode;
+  }
+  public get selectionActive() {
+    return !!this.selectedNode;
+  }
 }
