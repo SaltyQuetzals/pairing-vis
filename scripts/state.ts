@@ -7,6 +7,8 @@ export default class State {
   public selectedNode?: string;
   public selectedNeighbors?: Set<string>;
 
+  public draggedNode?: string;
+
   constructor(private readonly graph: Graph) {}
 
   public setHoveredNode(node?: string) {
@@ -61,5 +63,9 @@ export default class State {
   }
   public get selectionActive() {
     return !!this.selectedNode;
+  }
+
+  public get draggingActive() {
+    return !!this.draggedNode;
   }
 }
